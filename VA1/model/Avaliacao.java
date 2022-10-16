@@ -28,6 +28,10 @@ public class Avaliacao {
         this.nota = nota;
     }
 
+    public Avaliacao findAvaliacaoByIdNomeAvaliador(String lerString) {
+        return null;
+    }
+
     
 }
 

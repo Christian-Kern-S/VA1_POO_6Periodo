@@ -1,16 +1,18 @@
 package model;
 
-import java.util.*;
+import java.util.List;
 
 public class Jogo {
-    private int id;
+    private Integer id;
     private String nome;
     private String plataforma;
     private List<Avaliacao> avaliacoes;
+    public Jogo(boolean b, int lerInt, String lerString, String string) {
+    }
     public int getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getNome() {
@@ -25,6 +27,11 @@ public class Jogo {
     public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
     }
+    int sum = 0;
+    public Double mediaAvalicao(){
+        return mediaAvalicao();
+    }
+
     public List<Avaliacao> getAvaliacoes() {
         return avaliacoes;
     }
@@ -32,13 +39,17 @@ public class Jogo {
         this.avaliacoes = avaliacoes;
     }
 
-    public Double mediaAvalicao(){
-        return mediaAvalicao();
-    }
-   
-    @Override
-    public String toString() {
-        return "Jogo [id=" + id + ", nome=" + nome + ", plataforma=" + plataforma + ", avaliacoes=" + avaliacoes + "]";
+    public void adicionarAvaliacao(Avaliacao avaliacao) {
+        this.avaliacoes.add(avaliacao);
     }
     
+    @Override
+    public String toString() {
+        return "######## Professor #######\n"
+                + "ID: " + getId()
+                + "\n# NOME: " + getNome()
+                + "\n# PLATAORMA: " + getPlataforma()
+                + "\n# AVALIAÇÕES: " + mediaAvalicao()
+                + "\n##################################";
+    }
 }

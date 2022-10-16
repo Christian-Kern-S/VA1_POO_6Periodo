@@ -1,10 +1,11 @@
 package view;
 import java.util.*;
+import controller.GlobalControl;
 public class Main {
     
 
         final Scanner leitura = new Scanner(System.in);
-
+        GlobalControl global = new GlobalControl();
         public void run() {
             var opcaoMenu = -1;
             System.out.println("Bem vindo ao sistema");
@@ -18,13 +19,13 @@ public class Main {
                         System.out.println(listarMenu());
                         break;
                     case 1:
-                        
+                        global.AdicionarJogo();
                         break;
                     case 2:
-                        
+                        global.ListarJogos();
                         break;
                     case 3:
-                        
+                        global.AdicionarAvaliacaoNoJogo();
                         break;
                     case 4:
                         System.out.println("-------- Sistema encerrado!!! --------");
@@ -35,19 +36,10 @@ public class Main {
 
         public String listarMenu() {
             return "0 – Listar menu\n"
-                    + "1 – Cadastrar Aluno\n"
-                    + "2 – Cadastrar Professor\n"
-                    + "3 – Cadastrar Matéria\n"
-                    + "4 – Cadastrar Curso\n"
-                    + "5 – Listar Alunos\n"
-                    + "6 – Listar Professor\n"
-                    + "7 – Listar Matérias \n"
-                    + "8 – Listar Cursos\n"
-                    + "9 – Adicionar aluno a um curso\n"
-                    + "10 – Adicionar matéria a um curso\n"
-                    + "11 – Alterar professor da matéria\n"
-                    + "12- Conceder bolsa para aluno\n"
-                    + "14 - Sair\n"
+                    + "1 – Cadastrar Jogo\n"
+                    + "2 – Listar Jogos\n"
+                    + "3 – Avaliar Jogo\n"
+                    + "4 – Sair\n"
                     + "Digite uma opção: ";
         }
     
