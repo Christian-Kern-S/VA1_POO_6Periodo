@@ -9,7 +9,6 @@ import model.Jogo;
 public class GlobalControl {
 
     private JogoControl jogos;
-    private Jogo jogo;
     private Avaliacao avaliacoes;
     
 
@@ -24,18 +23,18 @@ public class GlobalControl {
     }
 
     Scanner sc = new Scanner(System.in);
+    
+    
     public void AdicionarJogo() {
         Jogo jogo = construirJogo();
         this.jogos.adicionarJogo(jogo);    
-        System.out.println("Curso Adicionado com sucesso!");
+        System.out.println("JogoAdicionado com sucesso!");
       }
 
 
 
     private Jogo construirJogo() {
-        List<Avaliacao> avaliacao = this.jogo.getAvaliacoes();
-        return new Jogo(   
-                avaliacao.add(null),
+        return new Jogo(  
                 lerInt("Digite o id do jogo"),
                 lerString("Digite o nome do jogo"),
                 lerString("Digite a plataforma do jogo"));

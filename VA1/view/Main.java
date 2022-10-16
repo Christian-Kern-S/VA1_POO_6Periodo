@@ -35,11 +35,11 @@ public class Main {
         }
 
         public String listarMenu() {
-            return "0 – Listar menu\n"
-                    + "1 – Cadastrar Jogo\n"
-                    + "2 – Listar Jogos\n"
-                    + "3 – Avaliar Jogo\n"
-                    + "4 – Sair\n"
+            return "0 - Listar menu\n"
+                    + "1 - Cadastrar Jogo\n"
+                    + "2 - Listar Jogos\n"
+                    + "3 - Avaliar Jogo\n"
+                    + "4 - Sair\n"
                     + "Digite uma opção: ";
         }
     

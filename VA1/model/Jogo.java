@@ -7,7 +7,7 @@ public class Jogo {
     private String nome;
     private String plataforma;
     private List<Avaliacao> avaliacoes;
-    public Jogo(boolean b, int lerInt, String lerString, String string) {
+    public Jogo(int lerInt, String lerString, String string) {
     }
     public int getId() {
         return id;

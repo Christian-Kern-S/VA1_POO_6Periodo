@@ -3,7 +3,7 @@ package controller;
 import java.util.*;
 import java.util.function.Predicate;
 
-import javax.print.attribute.standard.JobOriginatingUserName;
+
 
 import model.*;
 
@@ -35,7 +35,7 @@ public class JogoControl {
         this.jogos = jogos;
     }
     public Jogo findJogoById(String idJogo) {
-        Predicate<Jogo> filtroId = p -> p.getId().equal(idJogo);
+        Predicate<Jogo> filtroId = p -> p.getId().equalsIgnoreCase(idJogo);
         Jogo jogo = jogos.stream().filter(filtroId).findFirst().orElse(null);
         return jogo;
       }
