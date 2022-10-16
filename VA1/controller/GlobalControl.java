@@ -66,7 +66,7 @@ public class GlobalControl {
         
         Jogo jogo = null;
         while (jogo == null) {
-          jogo = this.jogos.findJogoById(lerString("Digite o id do jogo: "));
+          jogo = this.jogos.findJogoById(lerInt("Digite o id do jogo: "));
           if (jogo == null) {
             System.out.println("Jogo não encontrado, tente novamente!");
           }

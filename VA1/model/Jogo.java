@@ -6,7 +6,7 @@ public class Jogo {
     private Integer id;
     private String nome;
     private String plataforma;
-    private List<Avaliacao> avaliacoes;
+    private List<Avaliacao> avaliacoes = getAvaliacoes();
     public Jogo(int lerInt, String lerString, String string) {
     }
     public int getId() {
@@ -42,6 +42,8 @@ public class Jogo {
     public void adicionarAvaliacao(Avaliacao avaliacao) {
         this.avaliacoes.add(avaliacao);
     }
+
+
     
     @Override
     public String toString() {

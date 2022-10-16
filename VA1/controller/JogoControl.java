@@ -34,10 +34,12 @@ public class JogoControl {
     public void setJogos(List<Jogo> jogos) {
         this.jogos = jogos;
     }
-    public Jogo findJogoById(String idJogo) {
-        Predicate<Jogo> filtroId = p -> p.getId().equalsIgnoreCase(idJogo);
-        Jogo jogo = jogos.stream().filter(filtroId).findFirst().orElse(null);
+    public Jogo findJogoById(Integer idJogo) {
+        Predicate<Jogo> id_inserido = g -> g.getId().equalsIgnoreCase(idJogo);
+        Jogo jogo = jogos.stream().filter(g -> g.getId() == id_inserido).findFirst().orElse(null);
         return jogo;
       }
+
+
 
 }
